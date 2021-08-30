@@ -6,13 +6,13 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 07:58:07 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/29 07:59:05 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/08/30 12:03:16 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_stack.h"
 
-t_stack		*t_stack_top(t_stack **self)
+int	t_stack_top(t_stack **self)
 {
-	return (*self);
+	return ((*self)->data);
 }

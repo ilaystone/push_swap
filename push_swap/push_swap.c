@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:06:27 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/29 13:53:30 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/08/30 12:14:34 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int		main(int ac, char **av)
 {
+	printf("==> %d\n", ac);
 	if (ac > 1)
 	{
 		if (!push_swap_check_errors(ac, av))

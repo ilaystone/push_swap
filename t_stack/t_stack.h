@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:59:04 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/29 15:20:43 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/08/30 12:03:27 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ typedef struct s_stack
 
 t_stack		*t_stack_init(t_stack **);
 t_stack		*t_stack_push(t_stack **, int);
-t_stack		*t_stack_top(t_stack **);
 t_stack		*t_stack_pop(t_stack **);
 size_t		t_stack_size(t_stack *);
+int			t_stack_top(t_stack **);
 int			t_stack_index(t_stack *, size_t);
 void		t_stack_destory(t_stack **);
 void		t_stack_display(t_stack	*);

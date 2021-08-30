@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 10:08:33 by ikhadem           #+#    #+#              #
-#    Updated: 2021/08/29 15:08:39 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/08/30 10:17:04 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC :=	push_swap.c \
 		push_swap_sort.c \
 		push_swap_set_stack.c \
 		push_swap_tokenize.c \
+		push_swap_radix_sort.c \
 		ps_push.c \
 		ps_reverse_rotate.c \
 		ps_rotate.c \
