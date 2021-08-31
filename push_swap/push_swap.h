@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:59:06 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/30 10:33:54 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/08/31 08:01:19 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int			cheack_args_duplicates(int , char **);
 void		push_swap_sort(int , char **);
 void		push_swap_tokenize(t_stack **a);
 void		push_swap_radix_sort(t_stack **, t_stack **);
+void		check_stack_a(size_t size, int bit, t_stack **a, t_stack **b);
+void		check_stack_b(size_t size, int bit, t_stack **a, t_stack **b);
 
 /********************
 **** OPERATIONS ****

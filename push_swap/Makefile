@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 10:08:33 by ikhadem           #+#    #+#              #
-#    Updated: 2021/08/30 10:17:04 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/08/31 09:03:57 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,11 +25,12 @@ SRC :=	push_swap.c \
 		ps_reverse_rotate.c \
 		ps_rotate.c \
 		ps_swap.c \
+		check_stack.c \
 
 OBJ := $(SRC:.c=.o)
 
 CC = gcc
-FLAG = -Wall -Werror -Wextra
+# FLAG = -Wall -Werror -Wextra
 INCLUDE = -I. -I../t_stack/ -I../utils/
 LIBS = -L../t_stack/ -lstack -L../utils/ -lutils
 

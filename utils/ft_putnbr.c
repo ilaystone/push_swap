@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 10:06:27 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/31 07:56:17 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/08/31 07:53:21 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/08/31 07:55:27 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_utils.h"
 
-int		main(int ac, char **av)
+void	ft_putnbr(int n)
 {
-	if (ac > 1)
+	unsigned int nbr;
+
+	if (n < 0)
 	{
-		if (!push_swap_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-		{
-			push_swap_sort(ac, av);
-		}
+		ft_putchar_fd(1, '-');
+		nbr = -n;
 	}
 	else
-		ft_putstr_fd(2, "Error\n");
-	return (0);
+		nbr = n;
+	if (nbr >= 10)
+		ft_putnbr(nbr / 10);
+	ft_putchar_fd(1, nbr % 10 + 48);
 }
