@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 10:08:33 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/01 10:31:24 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/01 11:22:41 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,18 +19,17 @@ SRC :=	push_swap.c \
 		check_args_duplicates.c \
 		push_swap_sort.c \
 		push_swap_set_stack.c \
-		push_swap_tokenize.c \
 		push_swap_sequential_sort.c \
 		ps_push.c \
 		ps_reverse_rotate.c \
 		ps_rotate.c \
 		ps_swap.c \
-		check_stack.c \
+		push_swap_sort_three.c \
 
 OBJ := $(SRC:.c=.o)
 
 CC = gcc
-# FLAG = -Wall -Werror -Wextra
+FLAG = -Wall -Werror -Wextra
 INCLUDE = -I. -I../t_stack/ -I../utils/
 LIBS = -L../t_stack/ -lstack -L../utils/ -lutils
 
