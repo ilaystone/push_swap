@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_sort_three.c                             :+:      :+:    :+:   */
+/*   push_swap_max_sorted_sequence.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/01 10:43:13 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/01 11:36:25 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/01 14:03:47 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/01 14:30:12 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap_sort_three(t_stack **a)
+static void	rotate_smallest_To_top(t_stack **copy)
 {
-	int		max;
-	int		min;
+	size_t		index;
 
-	max = t_stack_max(*a);
-	min = t_stack_min(*a);
-	if ((t_stack_index(*a, 0) == max && t_stack_index(*a, 1) != min) ||
-		(t_stack_index(*a, 2) == max && t_stack_index(*a, 0) != min) ||
-		(t_stack_index(*a, 1) == max && t_stack_index(*a, 2) != min))
-	{
-		swap_stack(a);
-		ft_putstr_fd(1, "sa\n");
-	}
+	index = t_stack_index_of(*copy, 0);
+	while (index--)
+		rotate_stack(copy);
 }
+
+void	push_swap_max_sorted_sequence(t_stack **a)
+{
+	t_stack		*copy;
+
+	copy = t_stack_copy(*a);
+	rotate_smallest_To_top(&copy);
+	t_stack_display(copy);
+}
+
