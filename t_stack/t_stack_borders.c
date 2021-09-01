@@ -1,23 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_sort.c                                   :+:      :+:    :+:   */
+/*   t_stack_borders.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 13:16:02 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/01 10:31:53 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/01 10:33:53 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/01 10:36:57 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "t_stack.h"
 
-void	push_swap_sort(int ac, char **av)
+int	t_stack_max(t_stack *self)
 {
-	t_stack		*a;
-	t_stack		*b;
+	int		max;
 
-	t_stack_init(&b);
-	a = set_stack(ac, av);
-	push_swap_sequential_sort(&a, &b);
+	max = self->data;
+	while (self)
+	{
+		if (self->data > max)
+			max = self->data;
+		self = self->next;
+	}
+	return (max);
+}
+
+int	t_stack_min(t_stack *self)
+{
+	int		min;
+
+	min = self->data;
+	while (self)
+	{
+		if (self->data < min)
+			min = self ->data;
+		self = self->next;
+	}
+	return (min);
 }

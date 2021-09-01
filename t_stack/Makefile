@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 08:08:34 by ikhadem           #+#    #+#              #
-#    Updated: 2021/08/29 13:47:31 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/01 10:37:20 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC :=	t_stack_destroy.c \
 		t_stack_sort.c \
 		t_stack_is_sorted.c \
 		t_stack_copy.c \
+		t_stack_borders.c \
 
 OBJ := $(SRC:.c=.o)
 
