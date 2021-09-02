@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_stack_destroy.c                                  :+:      :+:    :+:   */
+/*   t_stack_remove_at.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/28 14:17:43 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/02 09:59:18 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/02 10:16:48 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/02 10:25:51 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_stack.h"
 
-void	t_stack_destory(t_stack **self)
+void t_stack_remove_at(t_stack **self, size_t index)
 {
-	t_stack		*holder;
-	t_stack		*iter;
+	t_stack *iter;
+	t_stack *holder;
 
-	iter = *self;
-	while (iter != NULL)
+	if (t_stack_size(*self) > index)
 	{
-		holder = iter;
-		iter= (iter->next);
+		if (index == 0)
+		{
+			holder = *self;
+			*self = (*self)->next;
+		}
+		else
+		{
+			iter = *self;
+			index--;
+			while (index != 0 && iter)
+			{
+				iter = iter->next;
+				index--;
+			}
+			holder = iter->next;
+			iter->next = iter->next->next;
+		}
 		free(holder);
 	}
-	*self = NULL;
 }

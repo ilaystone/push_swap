@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 13:22:35 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/29 14:14:24 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/01 14:26:56 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	t_stack_sort(t_stack **self)
 			iter->next->data = holder;
 			iter = *self;
 		}
-		iter = iter->next;
+		else
+			iter = iter->next;
 	}
 }

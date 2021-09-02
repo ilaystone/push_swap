@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:24:41 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/29 14:19:32 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/01 11:38:39 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,18 @@ static void	ft_putnbr(int n)
 
 void	t_stack_display(t_stack	*self)
 {
+	ft_putchar('*');
+	ft_putchar('*');
+	ft_putchar('*');
+	ft_putchar('\n');
 	while (self)
 	{
 		ft_putnbr(self->data);
 		ft_putchar('\n');
 		self = self->next;
 	}
+	ft_putchar('*');
+	ft_putchar('*');
+	ft_putchar('*');
+	ft_putchar('\n');
 }
