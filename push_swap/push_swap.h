@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:59:06 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/02 09:40:09 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/02 10:39:32 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 ***************/
 
 t_stack		*set_stack(int , char **);
+t_stack		*push_swap_longest_increasing_subsequence(t_stack **a);
 int			push_swap_check_errors(int , char **);
 int			check_args_numeric(int , char **);
 int			check_args_within_limits(int , char **);
@@ -33,7 +34,6 @@ void		push_swap_sort(int , char **);
 void		push_swap_tokenize(t_stack **a);
 void		push_swap_sequential_sort(t_stack **, t_stack **);
 void		push_swap_sort_three(t_stack **a);
-void		push_swap_longest_increasing_subsequence(t_stack **a);
 
 /********************
 **** OPERATIONS ****
