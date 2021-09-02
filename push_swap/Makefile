@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 10:08:33 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/01 14:06:32 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/02 09:53:14 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC :=	push_swap.c \
 		ps_swap.c \
 		push_swap_sort_three.c \
 		push_swap_tokenize.c \
-		push_swap_max_sorted_sequence.c \
+		push_swap_longest_increasing_subsequence.c \
 
 OBJ := $(SRC:.c=.o)
 
