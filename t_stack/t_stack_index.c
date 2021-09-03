@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 08:05:31 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/01 14:08:43 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/03 13:53:01 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	t_stack_index(t_stack *self, size_t index)
 	return (self->data);
 }
 
-size_t	t_stack_index_of(t_stack *self, int key)
+int	t_stack_index_of(t_stack *self, int key)
 {
-	size_t	index;
+	int		index;
 
 	index = 0;
 	while (self)
