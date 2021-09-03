@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_longest_increasing_subsequence.c         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ilay <ilay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 14:03:47 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/02 14:21:12 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/03 14:06:33 by ilay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static t_stack	*create_list_of_elements(t_stack *copy, int *lis, size_t size)
 		i++;
 	}
 	i = size - 1;
-	while (i >= 0)
+	while (i + 1 > 0)
 	{
 		if (lis[i] == max &&
 			(t_stack_size(res) == 0 ||
@@ -102,9 +102,8 @@ t_stack	*push_swap_longest_increasing_subsequence(t_stack **a)
 	t_stack		*lov;
 
 	copy = t_stack_copy(*a);
-	t_stack_display(copy);
 	rotate_smallest_To_top(&copy);
 	lov = create_list_of_elements(copy, lis(&copy), t_stack_size(copy));
-	t_stack_display(lov);
-	return (copy);
+	t_stack_destory(&copy);
+	return (lov);
 }
