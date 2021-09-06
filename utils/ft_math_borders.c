@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:15:31 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/06 15:18:43 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/06 15:21:32 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_math_abs(int nbr)
 		return (nbr);
 }
 
-int max(int a, int b)
+int ft_math_max(int a, int b)
 {
 	if (a < b)
 		return (b);
@@ -28,7 +28,7 @@ int max(int a, int b)
 		return (a);
 }
 
-int min(int a, int b)
+int ft_math_min(int a, int b)
 {
 	if (a < b)
 		return (a);
