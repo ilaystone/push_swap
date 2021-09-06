@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:58:56 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/31 07:54:37 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/06 15:19:17 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ size_t		ft_putstr_fd(int, char *);
 long		ft_atol(const char *str);
 size_t		ft_strlen(const char *str);
 void		ft_putnbr(int n);
+int			ft_math_abs(int nbr);
+int 		max(int a, int b);
+int 		min(int a, int b);
 
 #endif
