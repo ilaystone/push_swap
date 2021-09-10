@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:59:06 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/02 10:39:32 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/10 10:17:12 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void		push_swap_sort(int , char **);
 void		push_swap_tokenize(t_stack **a);
 void		push_swap_sequential_sort(t_stack **, t_stack **);
 void		push_swap_sort_three(t_stack **a);
+void		sort_elements_in_stack_b(t_stack **a, t_stack **b);
 
 /********************
 **** OPERATIONS ****
@@ -42,9 +43,9 @@ void		push_swap_sort_three(t_stack **a);
 void		swap_stack(t_stack **);
 void		swap_both(t_stack ** , t_stack **);
 void		rotate_stack(t_stack **);
-void		roatate_both(t_stack ** , t_stack **);
+void		rotate_both(t_stack ** , t_stack **);
 void		reverse_rotate_stack(t_stack **);
-void		reverse_roatate_both(t_stack ** , t_stack **);
+void		reverse_rotate_both(t_stack ** , t_stack **);
 void		push_stack(t_stack **, t_stack **);
 
 #endif

@@ -14,6 +14,7 @@ sa_c.rotate(-sa_c.index(1))
 print(sa_c)
 dyns_vals = [0] * len(sa_c)
 for i, x in enumerate(sa_c):
+	print(i, x)
 	t = []
 	for j, y in enumerate(reversed(dyns_vals[:i])):
 		if sa_c[i - 1 - j] < x:

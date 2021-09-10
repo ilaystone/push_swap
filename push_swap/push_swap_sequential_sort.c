@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 10:17:05 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/03 13:55:51 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/10 08:11:39 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,10 @@ static void	move_non_sorted_elements(t_stack **a, t_stack **b, t_stack *lis)
 	}
 }
 
-static void	sort_elements_in_stack_b(t_stack **a, t_stack **b)
-{
-	
-}
-
 void	push_swap_sequential_sort(t_stack **a, t_stack **b)
 {
 	t_stack		*lis;
 
-	(void)b;
 	t_stack_init(&lis);
 	if (t_stack_size(*a) == 3)
 		push_swap_sort_three(a);

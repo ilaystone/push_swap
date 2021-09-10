@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 10:08:33 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/02 09:53:14 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/10 08:14:24 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,12 @@ SRC :=	push_swap.c \
 		push_swap_sort_three.c \
 		push_swap_tokenize.c \
 		push_swap_longest_increasing_subsequence.c \
+		push_swap_sort_stack_b.c \
 
 OBJ := $(SRC:.c=.o)
 
 CC = gcc
-FLAG = -Wall -Werror -Wextra
+# FLAG = -Wall -Werror -Wextra
 INCLUDE = -I. -I../t_stack/ -I../utils/
 LIBS = -L../t_stack/ -lstack -L../utils/ -lutils
 
