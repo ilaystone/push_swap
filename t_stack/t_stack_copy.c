@@ -6,13 +6,13 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 13:45:06 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/29 14:12:11 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/12 10:47:14 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_stack.h"
 
-t_stack		*t_stack_copy(t_stack *self)
+t_stack	*t_stack_copy(t_stack *self)
 {
 	t_stack		*copy;
 	size_t		size;

@@ -6,20 +6,20 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:24:41 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/01 11:38:39 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/12 10:49:00 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_stack.h"
 
-static void ft_putchar(int c)
+static void	ft_putchar(int c)
 {
 	write(1, &c, 1);
 }
 
 static void	ft_putnbr(int n)
 {
-	unsigned int nbr;
+	unsigned int	nbr;
 
 	if (n < 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:17:43 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/02 09:59:18 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/12 10:48:17 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	t_stack_destory(t_stack **self)
 	while (iter != NULL)
 	{
 		holder = iter;
-		iter= (iter->next);
+		iter = (iter->next);
 		free(holder);
 	}
 	*self = NULL;
