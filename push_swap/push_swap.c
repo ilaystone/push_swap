@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 10:06:27 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/12 10:53:54 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/13 11:20:28 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,5 @@ int	main(int ac, char **av)
 		else
 			push_swap_sort(ac, av);
 	}
-	else
-		ft_putstr_fd(2, "Error\n");
 	return (0);
 }
