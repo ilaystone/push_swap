@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:59:06 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/10 10:17:12 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/13 09:08:07 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void		push_swap_tokenize(t_stack **a);
 void		push_swap_sequential_sort(t_stack **, t_stack **);
 void		push_swap_sort_three(t_stack **a);
 void		sort_elements_in_stack_b(t_stack **a, t_stack **b);
+int 		check_str_within_limit(char *str);
 
 /********************
 **** OPERATIONS ****

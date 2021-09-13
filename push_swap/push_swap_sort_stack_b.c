@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:12:27 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/10 12:08:02 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/12 10:52:25 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ static int	count_ops(int a, int b)
 static int	find_place(t_stack **a, int x)
 {
 	int		i;
-	int		max_val_pos = 0;
+	int		max_val_pos;
 	int		size;
 
 	i = 0;
-	size = t_stack_size(*a) - 1;
-	while (i < size + 1)
+	size = t_stack_size(*a);
+	while (i < size)
 	{
 		if (x < t_stack_index(*a, i) && x > t_stack_index(*a, i - 1))
 			return (i);
@@ -37,16 +37,15 @@ static int	find_place(t_stack **a, int x)
 		i++;
 	}
 	max_val_pos = t_stack_index_of(*a, t_stack_max(*a)) + 1;
-	if (max_val_pos == size + 1)
+	if (max_val_pos == size)
 		max_val_pos = 0;
-	if (max_val_pos > size + 1 - max_val_pos)
-		max_val_pos = -(size + 1) - max_val_pos;
+	if (max_val_pos > size - max_val_pos)
+		max_val_pos = -(size - max_val_pos);
 	return (max_val_pos);
 }
 
 static int	*find_best(t_stack **a, t_stack **b)
 {
-	int			max_ops;
 	t_stack		*iter;
 	int			i;
 	static int	res[2];
@@ -54,19 +53,20 @@ static int	*find_best(t_stack **a, t_stack **b)
 
 	i = 0;
 	iter = *b;
+	res[0] = -t_stack_size(*a);
+	res[1] = t_stack_size(*b);
 	while (iter)
 	{
-		max_ops = count_ops(-t_stack_size(*a), t_stack_size(*b));
-		if (count_ops(i, 0) >= max_ops)
+		if (count_ops(i, 0) >= count_ops(res[0], res[1]))
 			break ;
-		tmp = find_place(a, iter->data);
-		if (count_ops(tmp, i) < max_ops)
+		tmp = find_place(a, t_stack_index(*b, i));
+		if (count_ops(tmp, i) < count_ops(res[0], res[1]))
 		{
 			res[0] = tmp;
 			res[1] = i;
 		}
 		tmp = find_place(a, t_stack_index(*b, -i));
-		if (count_ops(tmp, -i) < max_ops)
+		if (count_ops(tmp, -i) < count_ops(res[0], res[1]))
 		{
 			res[0] = tmp;
 			res[1] = -i;
@@ -151,7 +151,7 @@ static void	align_stack(t_stack **a)
 	int		i;
 
 	pos = t_stack_index(*a, 0);
-	if (pos < t_stack_size(*a) - pos)
+	if (pos < (int)t_stack_size(*a) - pos)
 	{
 		i = pos;
 		while (i--)
@@ -175,16 +175,9 @@ void	sort_elements_in_stack_b(t_stack **a, t_stack **b)
 {
 	int		*best_pos;
 
-	t_stack_display(*a);
-	t_stack_display(*b);
 	while (t_stack_size(*b))
 	{
-		t_stack_display(*a);
-		t_stack_display(*b);
-		sleep(5);
 		best_pos = find_best(a, b);
-		printf("%d %d\n", best_pos[0], best_pos[1]);
-		sleep(5);
 		insert_next(a, b, best_pos);
 	}
 	align_stack(a);

@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 11:26:27 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/08/29 12:31:53 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/12 13:09:11 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	issign(int c)
 {
-	return (c == '+' || c == '-');
+	return (c == '+' || c == '-' || c == ' ');
 }
 
 static int	ft_strisdigit_or_sign(char *str)
@@ -31,7 +31,7 @@ static int	ft_strisdigit_or_sign(char *str)
 	return (1);
 }
 
-int		check_args_numeric(int ac, char **av)
+int	check_args_numeric(int ac, char **av)
 {
 	int		i;
 
