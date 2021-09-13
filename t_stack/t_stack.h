@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:59:04 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/12 10:46:54 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/13 09:02:24 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void		t_stack_display(t_stack	*self);
 void		t_stack_sort(t_stack **self);
 void		t_stack_add(t_stack **self, int data);
 void		t_stack_remove_at(t_stack **self, size_t index);
+int			t_stack_has_duplicates(t_stack *self);
 
 #endif
