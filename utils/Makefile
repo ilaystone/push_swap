@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 11:00:08 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/13 08:51:06 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/16 17:17:44 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC :=	ft_putchar_fd.c \
 		ft_memcpy.c \
 		ft_strlcpy.c \
 		ft_strsplit.c \
+		ft_bzero.c \
 
 OBJ :=	$(SRC:.c=.o)
 

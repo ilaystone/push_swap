@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:58:56 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/13 08:52:38 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/16 17:17:01 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int		ft_math_min(int a, int b);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 char	**ft_split(char const *s, char c);
+void	ft_bzero(void *dest, size_t len);
 
 #endif
