@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 11:36:25 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/13 09:07:22 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/15 14:51:13 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int check_str_within_limit(char *str)
 	long	current;
 
 	current = ft_atol(str);
-		if (current > P_MAX_INT || current < P_MIN_INT)
-			return (0);
+	if (current > P_MAX_INT || current < P_MIN_INT)
+		return (0);
 	return (1);
 }
