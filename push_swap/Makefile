@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 10:08:33 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/13 11:13:48 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/16 16:04:40 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,10 @@ OBJ := $(SRC:.c=.o)
 CC = gcc
 FLAG = -Wall -Werror -Wextra
 INCLUDE = -I. -I../t_stack/ -I../utils/
+HDR = push_swap.h
 LIBS = -L../t_stack/ -lstack -L../utils/ -lutils
 
-%.o : %.c
+%.o : %.c $(HDR)
 	$(CC) $(FLAG) $(INCLUDE) -c $< -o $@
 
 all : $(NAME)
