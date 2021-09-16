@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   checker_reverse_rotate_bonus.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/16 17:05:47 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/16 17:06:08 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+void	reverse_rotate_stack(t_stack **s)
 {
-	if (ac > 1)
-	{
-		if (!checker_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-			checker_execute(ac, av);
-	}
-	return (0);
+	t_stack		*iter;
+	t_stack		*tail;
+
+	iter = *s;
+	while (iter->next->next)
+		iter = iter->next;
+	tail = iter->next;
+	iter->next = NULL;
+	tail->next = (*s);
+	*s = tail;
+}
+
+void	reverse_rotate_both(t_stack **a, t_stack **b)
+{
+	reverse_rotate_stack(a);
+	reverse_rotate_stack(b);
 }

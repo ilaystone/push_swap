@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   checker_check_errors_bonus.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/16 15:19:17 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/16 16:08:47 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+int	checker_check_errors(int ac, char **av)
 {
-	if (ac > 1)
-	{
-		if (!checker_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-			checker_execute(ac, av);
-	}
-	return (0);
+	if (!check_args_numeric(ac, av))
+		return (0);
+	if (!check_args_within_limits(ac, av))
+		return (0);
+	if (!check_args_duplicates(ac, av))
+		return (0);
+	return (1);
 }

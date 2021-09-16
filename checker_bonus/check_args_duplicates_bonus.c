@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   check_args_duplicates_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/16 15:49:40 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/16 16:08:41 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+int	check_args_duplicates(int ac, char **av)
 {
-	if (ac > 1)
+	int		i;
+	int		j;
+	int		count;
+
+	i = 1;
+	while (i < ac)
 	{
-		if (!checker_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-			checker_execute(ac, av);
+		count = 0;
+		j = 1;
+		while (j < ac)
+		{
+			if (ft_strcmp(av[i], av[j]) == 0)
+				count++;
+			j++;
+		}
+		if (count != 1)
+			return (0);
+		i++;
 	}
-	return (0);
+	return (1);
 }

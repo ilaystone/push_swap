@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   checker_push_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/16 17:06:19 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/16 17:06:28 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+void	push_stack(t_stack **s1, t_stack **s2)
 {
-	if (ac > 1)
-	{
-		if (!checker_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-			checker_execute(ac, av);
-	}
-	return (0);
+	t_stack		*temp;
+
+	temp = t_stack_pop(s1);
+	t_stack_push(s2, temp->data);
+	free(temp);
 }

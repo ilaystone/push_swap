@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   checker_execute_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/16 16:09:17 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/16 17:45:03 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+void	checker_execute(int ac, char **av)
 {
-	if (ac > 1)
+	t_stack		*a;
+	t_stack		*b;
+
+	t_stack_init(&b);
+	t_stack_init(&a);
+	a = set_stack(ac, av);
+	if (a != NULL && !t_stack_has_duplicates(a))
 	{
-		if (!checker_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-			checker_execute(ac, av);
+		checker_execute_instructions(&a, &b);
 	}
-	return (0);
+	else
+		ft_putstr_fd(2, "Error\n");
+	if (t_stack_is_sorted(a))
+		ft_putstr_fd(1, "OK\n");
+	else
+		ft_putstr_fd(1, "KO\n");
+	t_stack_destory(&a);
+	t_stack_destory(&b);
 }

@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   checker_swap_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/16 17:04:51 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/16 17:05:04 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+void	swap_stack(t_stack **s)
 {
-	if (ac > 1)
+	int		holder;
+
+	if (*s && (*s)-> next)
 	{
-		if (!checker_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-			checker_execute(ac, av);
+		holder = (*s)->data;
+		(*s)->data = (*s)->next->data;
+		(*s)->next->data = holder;
 	}
-	return (0);
+}
+
+void	swap_both(t_stack **a, t_stack **b)
+{
+	swap_stack(a);
+	swap_stack(b);
 }

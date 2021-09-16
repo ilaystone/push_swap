@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   check_args_value_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Created: 2021/09/16 15:43:25 by ikhadem           #+#    #+#             */
+/*   Updated: 2021/09/16 15:43:42 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+int	check_args_within_limits(int ac, char **av)
 {
-	if (ac > 1)
+	int		i;
+	long	current;
+
+	i = 1;
+	while (i < ac)
 	{
-		if (!checker_check_errors(ac, av))
-			ft_putstr_fd(2, "Error\n");
-		else
-			checker_execute(ac, av);
+		current = ft_atol(av[i]);
+		if (current > P_MAX_INT || current < P_MIN_INT)
+			return (0);
+		i++;
 	}
-	return (0);
+	return (1);
 }
+
+int check_str_within_limit(char *str)
+{
+	long	current;
+
+	current = ft_atol(str);
+	if (current > P_MAX_INT || current < P_MIN_INT)
+		return (0);
+	return (1);
+}
+
