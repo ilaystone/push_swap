@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 08:08:34 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/13 09:02:36 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/16 17:47:15 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,9 +32,10 @@ OBJ := $(SRC:.c=.o)
 
 CC = gcc
 FLAG = -Wextra -Werror -Wall
-INCLUDE = -It_stack.h
+HDR = t_stack.h
+INCLUDE = -I.
 
-%.o : %.c
+%.o : %.c $(HDR)
 	$(CC) $(FLAG) $(INCLUDE) -c $< -o $@
 
 all: $(NAME)
