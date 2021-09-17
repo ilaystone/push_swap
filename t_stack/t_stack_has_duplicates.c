@@ -6,13 +6,13 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 08:59:47 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/13 09:02:09 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 16:57:17 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_stack.h"
 
-int		t_stack_has_duplicates(t_stack *self)
+int	t_stack_has_duplicates(t_stack *self)
 {
 	t_stack		*i;
 	t_stack		*j;
