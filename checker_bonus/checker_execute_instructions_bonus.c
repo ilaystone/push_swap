@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 17:02:33 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 17:45:22 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 15:20:14 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	apply_instruction(t_stack **a, t_stack **b, char *ins)
 	else if (ft_strcmp("sb\n", ins) == 0)
 		swap_stack(b);
 	else if (ft_strcmp("ss\n", ins) == 0)
-		swap_both(a,b);
+		swap_both(a, b);
 	else if (ft_strcmp("ra\n", ins) == 0)
 		rotate_stack(a);
 	else if (ft_strcmp("rb\n", ins) == 0)
@@ -51,7 +51,7 @@ void	checker_execute_instructions(t_stack **a, t_stack **b)
 	{
 		ft_bzero(str, 5);
 		i = read(0, str, 4);
-		if (!apply_instruction(a, b, str) && i != 0)
+		if (i != 0 && !apply_instruction(a, b, str))
 		{
 			ft_putstr_fd(2, "Error\n");
 			t_stack_destory(a);

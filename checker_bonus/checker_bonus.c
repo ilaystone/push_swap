@@ -6,13 +6,13 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 10:56:55 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 16:09:07 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 15:18:44 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int		main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	if (ac > 1)
 	{
