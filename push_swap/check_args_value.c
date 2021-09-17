@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 11:36:25 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/15 14:51:13 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 15:23:13 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	check_args_within_limits(int ac, char **av)
 	return (1);
 }
 
-int check_str_within_limit(char *str)
+int	check_str_within_limit(char *str)
 {
 	long	current;
 

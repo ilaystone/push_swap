@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 12:21:40 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/01 14:27:23 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 15:45:41 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	swap_to_indexes_values(t_stack **a, t_stack **copy)
 			if (iter1->data == iter2->data)
 			{
 				iter1->data = i;
-				break;
+				break ;
 			}
 			i++;
 			iter2 = iter2->next;
