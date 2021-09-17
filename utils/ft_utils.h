@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:58:56 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 17:17:01 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 16:10:48 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_isdigit(int c);
 int		ft_strisdigit(char *str);
 int		ft_strcmp(char *s1, char *s2);
 int		ft_isspace(int c);
-size_t	ft_putstr_fd(int fd, char *str);
+size_t	ft_putstr_fd(int fd, const char *str);
 long	ft_atol(const char *str);
 size_t	ft_strlen(const char *str);
 void	ft_putnbr(int n);

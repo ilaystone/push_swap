@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 08:49:43 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/13 08:49:50 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 16:57:51 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t slen;
+	size_t	slen;
 
 	slen = ft_strlen(src);
 	if (slen + 1 < size)
