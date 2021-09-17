@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 12:21:40 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/17 15:45:41 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 17:12:03 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ void	push_swap_tokenize(t_stack **a)
 	copy = t_stack_copy(*a);
 	t_stack_sort(&copy);
 	swap_to_indexes_values(a, &copy);
+	t_stack_destory(&copy);
 }

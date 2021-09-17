@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 10:17:05 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/10 08:11:39 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 17:11:27 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,5 @@ void	push_swap_sequential_sort(t_stack **a, t_stack **b)
 	lis = push_swap_longest_increasing_subsequence(a);
 	move_non_sorted_elements(a, b, lis);
 	sort_elements_in_stack_b(a, b);
+	t_stack_destory(&lis);
 }

@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 14:03:47 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/17 15:36:15 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/17 17:14:08 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,13 @@ t_stack	*push_swap_longest_increasing_subsequence(t_stack **a)
 {
 	t_stack		*copy;
 	t_stack		*lov;
+	int			*l;
 
 	copy = t_stack_copy(*a);
 	rotate_smallest_to_top(&copy);
-	lov = create_list_of_elements(copy, lis(&copy), t_stack_size(copy));
+	l = lis(&copy);
+	lov = create_list_of_elements(copy, l, t_stack_size(copy));
+	free(l);
 	t_stack_destory(&copy);
 	return (lov);
 }
