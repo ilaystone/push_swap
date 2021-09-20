@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/16 17:09:36 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/20 07:40:44 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/20 08:20:06 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC :=	check_args_duplicates_bonus.c \
 OBJ := $(SRC:.c=.o)
 
 CC = gcc
-# FLAG = -Wall -Werror -Wextra
+FLAG = -Wall -Werror -Wextra
 INCLUDE = -I. -I../t_stack/ -I../utils/
 HDR = checker_bonus.h
 LIBS = -L../t_stack/ -lstack -L../utils/ -lutils

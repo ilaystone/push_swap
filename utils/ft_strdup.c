@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 08:13:46 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/20 08:28:38 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/20 08:39:18 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(char *str)
 
 	size = ft_strlen(str);
 	i = 0;
-	*res = (char *)malloc(size + 1);
+	res = (char *)malloc(size + 1);
 	if (!res)
 		return (NULL);
 	while (str[i] != '\0')

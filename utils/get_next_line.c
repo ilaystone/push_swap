@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 08:25:50 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/20 08:35:46 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/20 08:37:43 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	fill_line(t_str **data, char **line, int i, int j)
 			return (1);
 		}
 	}
-	*line = *res;
+	*line = res;
 	return (0);
 }
 

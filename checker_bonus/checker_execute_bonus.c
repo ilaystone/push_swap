@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 16:09:17 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/17 13:27:31 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/20 08:58:13 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,15 @@ void	checker_execute(int ac, char **av)
 	t_stack_init(&a);
 	a = set_stack(ac, av);
 	if (a != NULL && !t_stack_has_duplicates(a))
+	{
 		checker_execute_instructions(&a, &b);
+		if (t_stack_is_sorted(a))
+			ft_putstr_fd(1, "OK\n");
+		else
+			ft_putstr_fd(1, "KO\n");
+	}
 	else
 		ft_putstr_fd(2, "Error\n");
-	if (t_stack_is_sorted(a))
-		ft_putstr_fd(1, "OK\n");
-	else
-		ft_putstr_fd(1, "KO\n");
 	t_stack_destory(&a);
 	t_stack_destory(&b);
 }
