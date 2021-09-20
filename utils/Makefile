@@ -6,7 +6,7 @@
 #    By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 11:00:08 by ikhadem           #+#    #+#              #
-#    Updated: 2021/09/16 17:48:01 by ikhadem          ###   ########.fr        #
+#    Updated: 2021/09/20 08:26:21 by ikhadem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,14 @@ SRC :=	ft_putchar_fd.c \
 		ft_strlcpy.c \
 		ft_strsplit.c \
 		ft_bzero.c \
+		get_next_line.c \
+		ft_lst_strchr.c \
+		ft_lstaddback.c \
+		ft_lstfree_node.c \
+		ft_lstnew.c \
+		ft_lststr_length.c \
+		ft_strchr.c \
+		ft_strdup.c \
 
 OBJ :=	$(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 14:58:56 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/17 16:10:48 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/20 08:28:52 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+
+typedef struct s_str
+{
+	char			*content;
+	struct s_str	*next;
+}	t_str;
 
 int		ft_atoi(const char *str);
 int		ft_putchar_fd(int fd, int c);
@@ -34,5 +40,16 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 char	**ft_split(char const *s, char c);
 void	ft_bzero(void *dest, size_t len);
+int		get_next_line(char **line);
+char	*ft_strdup(char *str);
+t_str	*ft_lstnew(char *content);
+int		ft_strchr(char *str, char c);
+int		lst_strchr(t_str *lst, char c);
+void	ft_lstaddback(t_str **lst, char *n);
+void	free_node(t_str **data);
+t_str	*ft_lstnew(char *content);
+int		str_length(t_str *lst);
+int		ft_strchr(char *str, char c);
+int		get_next_line(char **line);
 
 #endif

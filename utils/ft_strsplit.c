@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 11:03:19 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/17 17:01:34 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/18 14:01:09 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,13 +89,13 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	next_str = (char *)s;
 	next_str_len = 0;
-	while (i++ < nb_strs)
+	while (i < nb_strs)
 	{
 		ft_get_next_str(&next_str, &next_str_len, c);
-		tab[i - 1] = (char *)malloc(sizeof(char) * (next_str_len + 1));
-		if (!tab[i - 1])
+		tab[i] = (char *)malloc(sizeof(char) * (next_str_len + 1));
+		if (!tab[i])
 			return (ft_malloc_error(tab));
-		ft_strlcpy(tab[i - 1], next_str, next_str_len + 1);
+		ft_strlcpy(tab[i++], next_str, next_str_len + 1);
 	}
 	tab[i] = NULL;
 	return (tab);
