@@ -6,7 +6,7 @@
 /*   By: ikhadem <ikhadem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:40:32 by ikhadem           #+#    #+#             */
-/*   Updated: 2021/09/16 15:41:09 by ikhadem          ###   ########.fr       */
+/*   Updated: 2021/09/19 14:23:00 by ikhadem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	issign(int c)
 {
-	return (c == '+' || c == '-' || c == ' ');
+	return (c == '+' || c == '-');
 }
 
 int	check_str(char *str)
